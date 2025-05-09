@@ -6,7 +6,7 @@ website:
   title: "jake1705"
   navbar:
     left:
-      - href: Reserach Design.qmd
+      - href: Research Design.qmd
         text: Home
 
 format:
