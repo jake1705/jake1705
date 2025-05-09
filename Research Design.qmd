@@ -1,0 +1,349 @@
+---
+title: "Digital Infrastructure and Poverty Outcomes"
+editor: visual
+
+format:
+  html:
+    self-contained: true
+---
+
+# **\[1\]**
+
+**Research Question:** How does access to digital infrastructure affect poverty outcomes in Sub-Saharan Africa, controlling for perceived local corruption and other socioeconomic factors?
+
+One of the biggest challenges in Sub-Saharan Africa is extreme poverty. My original research question asked whether infrastructure or corruption was a stronger predictor of poverty. However, this framing presented difficulties, both methodologically and conceptually.
+
+In response to this question, I received the following feedback: “I like that you point to a specific mechanism from the literature (corruption prevents poverty alleviation efforts from reaching poor people). Is there a way you can put your own spin on this? Are there specific types of poverty alleviation programs you’re particularly interested in? Or maybe you care more about infrastructure projects; we know infrastructure is both essential for growth and vulnerable to corruption... do you have any ideas about features of specific countries that might make corruption a bigger or smaller obstacle to infrastructure?”
+
+Taking this feedback into account, I decided to narrow the focus and sharpen the causal mechanism. In order to address a more specific type of infrastructure that informs a clear policy direction — enhancing digital infrastructure — I’ve refined the research question to test a more direct relationship: whether digital infrastructure is associated with improved poverty outcomes, while treating corruption as a potential confounding factor rather than a competing one.
+
+Citizens in many low-income countries lack consistent access to modern technologies. My goal is to explore whether providing aid in the form of digital infrastructure — such as electricity, mobile phones, and computers — is linked to better poverty outcomes across the region. This reframing helps isolate a policy-relevant mechanism with more straightforward empirical implications.
+
+Although I have not found a study that directly tests this specific relationship, related literature offers useful parallels. For example, a study published in the *Harvard International Review* found that technology improved poverty outcomes in Sub-Saharan Africa, although its focus was on agricultural innovation (Li, 2020). In another study, Kanyam et al. (2017) examined the relationship between mobile infrastructure and corruption, but investigated a different direction of causality: whether mobile phone adoption could help reduce corruption.
+
+My project instead looks at whether access to digital technology can improve poverty outcomes, while controlling for how governance quality (measured through perceived local corruption) may influence that relationship. This helps fill a gap in the literature by examining the intersection of digital access, poverty, and governance conditions within a single framework.
+
+# **\[2\]**
+
+**Hypotheses:**
+
+-   Greater access to digital infrastructure in the form of mobile phones, computers, and electricity connection is associated with lower poverty outcomes in Sub-Saharan Africa.
+
+My previous hypotheses were the following:
+
+-   Higher perceived corruption in local institutions (police, local government officials) is associated with higher levels of extreme poverty (measured by frequency of going without food, water, or income).
+
+-   Lack of basic infrastructure (electricity, roads, water) contributes to extreme poverty, but corruption has a stronger negative impact as it prevents resources and services from reaching people
+
+I adjusted my first hypothesis to fit my new reserach focus on digital infrastructure instead of infrastructure more generally. My feedback for the second hypothesis was that it would be difficult to test hypotheses that compare how much two factors contribute to a phenomena. For this reason, I decided to use 'corruption' as a confounding variable and focus on the direct mechanism behind the 'digital infrastructure' and 'poverty outcome' variables in a single hypothesis - testing whether greater access to digital infrastructure (including electricity, mobile phones, and computers) will be associated with lower levels of poverty in Sub-Saharan Africa.
+
+The logic for this hypothesis is based on the fact that digital tools creates new channels for communication, education, job opportunities, mobile banking, and access to government services. For individuals in low-income or rural areas, even basic digital tools can dramatically improve daily life — whether its by accessing online education or simply connecting to employment opportunities.
+
+However, I also recognize that digital infrastructure alone may not be sufficient if broader governance conditions are weak. For this reason, I include perceived local corruption as a confounding variable. In areas where institutions are more corrupt, development funds and services may not reach communities effectively — and this could dampen the impact of infrastructure.
+
+By controlling for corruption and other factors like education, age, gender, and geography, my goal is to isolate the **independent** effect that digital infrastructure has on poverty outcomes. I expect the effect to remain significant, though I acknowledge that the quality of institutions may still play an indirect role.
+
+In short, I believe digital infrastructure can reduce poverty — but only when people are empowered to use it meaningfully.
+
+# **\[3\]**
+
+**Dataset:** <https://www.afrobarometer.org/survey-resource/merged-round-8-data-34-countries-2022/>
+
+The dataset I will be using is the Afrobarometer merged dataset from 2023. The unit of analysis is a single person since this is an individual survey response dataset. It captures vast dimensions of individual experiences such as their perceptions of corruption, infrastructure access, and more. The sample in this dataset includes respondents from a wide variety of Sub-Saharan African countries.
+
+**Digital Infrastructure (IV)**
+
+-   **Q90D - Own computer**
+
+    -   -1 = Missing; 0 = No, no one in the household owns; 1 = Someone else in household owns; 2 = Yes (personally owns); 8 = Refused; 9 = Don’t know
+
+-   **Q90f - Own mobile phone**
+
+    -   -1 = Missing; 0 = No, no one in the household owns; 1 = Someone else in household owns; 2 = Yes (personally owns); 8 = Refused; 9 = Don’t know
+
+-   **Q92a - Electric Connection from mains (Is your home connected to the national power grid?)**
+
+    -   -1 = Missing; 0 = No; 1 = Yes; 8 = Refused to Answer; 9 = Don't Know
+
+**Poverty Outcomes (DV)**
+
+-   **Q6a. How often gone without food**
+
+    -   Ordinal:
+
+        -   -1 = Missing 0 = Never 1 = Just once or twice 2 = Several times 3 = Many times 4 = Always 8 = Refused 9 = Don't Know
+
+-   **Q6b. How often gone without water**
+
+    -   Ordinal:
+
+        -   -1 = Missing 0 = Never 1 = Just once or twice 2 = Several times 3 = Many times 4 = Always 8 = Refused 9 = Don't Know
+
+-   **Q6e. How often gone without cash income**
+
+    -   Ordinal:
+
+        -   -1 = Missing 0 = Never 1 = Just once or twice 2 = Several times 3 = Many times 4 = Always 8 = Refused 9 = Don't Know
+
+**Control Variables + Fixed Effects**
+
+-   **Q94. Education of respondent**
+
+    -   Nominal: 
+
+        -   -1 = Missing 0 = No formal schooling 1 = Informal schooling only (including Koranic schooling) 2 = Some primary schooling 3 = Primary school completed 4 = Intermediate school or Some secondary school / high school 5 = Secondary school / high school completed 6 = Post-secondary qualifications, other than university e.g. a diploma or degree from a polytechnic or college 7 = Some university 8 = University completed 9 = Post-graduate 98 = Refused 99 = Don’t know
+
+-   **Urban or Rural Primary Sampling Unit**
+
+    -   Nominal: 
+
+        -   1 = Urban 2 = Rural 3 = Peri-urban
+
+-   **Corruption Index**
+
+    -   **Q38d. Corruption: Local Government Councilors**
+
+        -   Ordinal: 
+
+            -   -1 = Missing 0 = None 1 = Some of them 2 = Most of them 3 = All of them 8 = Refused 9 = Don't know/ Haven’t heard 94 = Not asked in the country
+
+    -   **Q38e. Corruption: Police**
+
+        -   Ordinal:
+
+            -   -1 = Missing 0 = None 1 = Some of them 2 = Most of them 3 = All of them 8 = Refused 9 = Don't know/ Haven’t heard
+
+    -   **Q39a. Perceived Level of Corruption in the Country**
+
+        -   Ordinal:
+
+            -   -1 = Missing 1 = Increased a lot 2 = Increased somewhat 3 = Stayed the same 4 = Decreased somewhat 5 = Decreased a lot 8 = Refused 9 = Don’t know
+
+**PLOT AND CODE IMPLEMENTATION:**
+
+**\[Figure 1\]**
+
+![](images/plot.png)
+
+Figure 1 visualizes the relationship between digital infrastructure and poverty outcomes in Sub-Saharan Africa. The x-axis represents a composite index of digital access, calculated from whether a respondent personally owns a mobile phone, computer, and has access to electricity. The y-axis shows the average frequency with which respondents report going without food, water, or income — where 0 indicates "never" and 4 indicates "always."
+
+The scatterplot reveals a negative association - as digital infrastructure access increases, self-reported poverty decreases. This pattern is captured by the downward-sloping blue regression line. Despite substantial overlap and clustering at discrete values (due to the ordinal nature of survey responses), the overall trend supports the hypothesis that improved access to digital tools is associated with better poverty outcomes.
+
+This figure provides preliminary visual evidence that digital infrastructure may play a role in alleviating extreme poverty, even after accounting for individual variation. It justifies further analysis with regression models that control for potential confounders such as perceived corruption, education level, and urban/rural residence.
+
+```{r setup}
+# Load libraries
+library(haven)
+library(dplyr)
+library(ggplot2)
+
+# Load Afrobarometer data
+afro <- read_sav("/Users/jakemaeng/Downloads/R9.Merge_39ctry.20Nov23.final.release_Updated.25Oct24 2 2.sav")
+
+# Step 1: Create binary indicators for digital infrastructure
+afro <- afro %>%
+  mutate(
+    owns_computer = ifelse(Q90D == 2, 1, ifelse(Q90D %in% c(0,1), 0, NA)),
+    owns_mobile = ifelse(Q90F == 2, 1, ifelse(Q90F %in% c(0,1), 0, NA)),
+    has_electricity = ifelse(Q92A == 1, 1, ifelse(Q92A == 0, 0, NA))
+  )
+
+# Step 2: Create digital access index
+afro <- afro %>%
+  mutate(
+    digital_access_index = rowMeans(cbind(owns_computer, owns_mobile, has_electricity), na.rm = TRUE)
+  )
+
+# Step 3: Create poverty index
+afro <- afro %>%
+  mutate(
+    gone_without_food = ifelse(Q6A %in% 0:4, Q6A, NA),
+    gone_without_water = ifelse(Q6B %in% 0:4, Q6B, NA),
+    gone_without_income = ifelse(Q6E %in% 0:4, Q6E, NA),
+    poverty_index = rowMeans(cbind(gone_without_food, gone_without_water, gone_without_income), na.rm = TRUE)
+  )
+
+# Step 4: Create corruption index
+afro <- afro %>%
+  mutate(
+    corruption_local = ifelse(Q38D %in% 0:3, Q38D, NA),
+    corruption_police = ifelse(Q38E %in% 0:3, Q38E, NA),
+    corruption_index = rowMeans(cbind(corruption_local, corruption_police), na.rm = TRUE)
+  )
+
+# Step 5: Create control variables (education + urban/rural)
+afro <- afro %>%
+  mutate(
+    education = ifelse(Q94 %in% 0:9, Q94, NA),
+    urban_rural = case_when(
+      URBRUR == 1 ~ "Urban",
+      URBRUR == 2 ~ "Rural",
+      URBRUR == 3 ~ "Peri-Urban",
+      TRUE ~ NA_character_
+    )
+  )
+
+# Step 6: Run regression
+model <- lm(poverty_index ~ digital_access_index + corruption_index + education + urban_rural, data = afro)
+summary(model)
+
+# Step 7: Plot the result
+ggplot(afro, aes(x = digital_access_index, y = poverty_index)) +
+  geom_jitter(alpha = 0.3, width = 0.05, height = 0.05) +
+  geom_smooth(method = "lm", color = "blue") +
+  labs(
+    title = "Digital Infrastructure and Poverty in Sub-Saharan Africa",
+    x = "Digital Access Index (0 = no access, 1 = full access)",
+    y = "Poverty Index (0 = Never gone without food/water/income, 4 = Always)",
+    caption = "Based on Afrobarometer Round 9 (2023). A negative relationship is shown between digital infrastructure access and poverty levels."
+  ) +
+  theme_minimal()
+
+```
+
+**Summary Statistics**
+
+```{r}
+summary_table <- afro %>%
+  summarise(
+    mean_digital_access = mean(digital_access_index, na.rm = TRUE),
+    min_digital_access = min(digital_access_index, na.rm = TRUE),
+    max_digital_access = max(digital_access_index, na.rm = TRUE),
+    
+    mean_poverty = mean(poverty_index, na.rm = TRUE),
+    min_poverty = min(poverty_index, na.rm = TRUE),
+    max_poverty = max(poverty_index, na.rm = TRUE),
+    
+    mean_corruption = mean(corruption_index, na.rm = TRUE),
+    min_corruption = min(corruption_index, na.rm = TRUE),
+    max_corruption = max(corruption_index, na.rm = TRUE)
+  )
+
+print(summary_table)
+
+```
+
+For the **digital access index** the mean is 0.527 across respondents (with a range from 0 to 1).
+
+For the **poverty index** the mean is 1.55 across respondents (with a range from 0 to 4).
+
+For **corruption index** the mean is a 1.47 across respondents (with a range from 0 to 3).
+
+**OLD PLOTS AND CODE IMPLEMENTATION**
+
+Below are the plots and code implementation from my previous hypothesis to demonstrate my progress from earlier and what adjustments I made based on the revised hypothesis.
+
+![](images/Poverty%20vs%20Infrastructure.png){width="415"}
+
+![](images/Corruption%20vs%20Poverty.png){width="432"}
+
+![](images/Poverty%20vs%20Corruption.png){width="408"}
+
+``` r
+# Loading libraries
+library(haven)  # For reading SPSS .sav files
+library(ggplot2)  # For visualization
+library(dplyr)  # For data manipulation
+
+# Loading Afrobarometer dataset
+afrobarometer <- read_sav("/Users/jakemaeng/Downloads/R9.Merge_39ctry.20Nov23.final.release_Updated.25Oct24 2 2.sav")
+
+# Cleaning Corruption Variables (Setting invalid values to NA)
+afrobarometer$Q38D[afrobarometer$Q38D %in% c(-1, 8, 9, 94)] <- NA
+afrobarometer$Q38E[afrobarometer$Q38E %in% c(-1, 8, 9)] <- NA
+afrobarometer$Q39A[afrobarometer$Q39A %in% c(-1, 8, 9)] <- NA
+
+# Cleaning Poverty Variables (Setting invalid values to NA)
+afrobarometer$Q6A[afrobarometer$Q6A %in% c(-1, 8, 9)] <- NA
+afrobarometer$Q6B[afrobarometer$Q6B %in% c(-1, 8, 9)] <- NA
+afrobarometer$Q6E[afrobarometer$Q6E %in% c(-1, 8, 9)] <- NA
+
+# Cleaning Infrastructure Variables (Setting invalid values to NA)
+afrobarometer$EA_SVC_A[afrobarometer$EA_SVC_A %in% c(-1, 9)] <- NA
+afrobarometer$EA_SVC_B[afrobarometer$EA_SVC_B %in% c(-1, 9)] <- NA
+afrobarometer$EA_ROAD_B[afrobarometer$EA_ROAD_B %in% c(-1, 7)] <- NA
+
+# Encoding Corruption Variables as Ordered Factors
+afrobarometer$Q38D <- factor(afrobarometer$Q38D, levels = c(0,1,2,3), labels = c("None", "Some", "Most", "All"), ordered = TRUE)
+afrobarometer$Q38E <- factor(afrobarometer$Q38E, levels = c(0,1,2,3), labels = c("None", "Some", "Most", "All"), ordered = TRUE)
+
+# Encoding Infrastructure Variables
+afrobarometer$EA_SVC_A <- ifelse(afrobarometer$EA_SVC_A == 1, 1, 0)  # Electricity Access
+afrobarometer$EA_SVC_B <- ifelse(afrobarometer$EA_SVC_B == 1, 1, 0)  # Piped Water Access
+
+# Convert Road Quality Variable to Numeric (for averaging)
+afrobarometer$EA_ROAD_B <- as.numeric(factor(afrobarometer$EA_ROAD_B, levels = c(1, 2, 5), labels = c(1, 2, 3)))
+
+# Creating the **Aggregate Corruption Index**
+afrobarometer$corruption_index <- rowMeans(cbind(afrobarometer$Q38D, afrobarometer$Q38E, afrobarometer$Q39A), na.rm = TRUE)
+
+# Creating the **Aggregate Infrastructure Index**
+afrobarometer$infrastructure_index <- rowMeans(cbind(afrobarometer$EA_SVC_A, afrobarometer$EA_SVC_B, afrobarometer$EA_ROAD_B), na.rm = TRUE)
+
+# Creating the **Poverty Index**
+afrobarometer$poverty_index <- rowMeans(cbind(afrobarometer$Q6A, afrobarometer$Q6B, afrobarometer$Q6E), na.rm = TRUE)
+
+# ----  Visualizations ----
+
+# Corruption Index vs. Poverty Index (Scatter Plot)
+ggplot(afrobarometer, aes(x = corruption_index, y = poverty_index)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = "lm", se = FALSE, color = "blue") +
+  labs(title = "Relationship Between Corruption and Poverty", x = "Corruption Index", y = "Poverty Index") +
+  theme_minimal()
+
+# Infrastructure Index vs. Poverty Index (Scatter Plot)
+ggplot(afrobarometer, aes(x = infrastructure_index, y = poverty_index)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  labs(title = "Relationship Between Infrastructure and Poverty", x = "Infrastructure Index", y = "Poverty Index") +
+  theme_minimal()
+
+# Boxplot: Corruption Levels and Poverty
+ggplot(afrobarometer, aes(x = as.factor(Q38D), y = poverty_index, fill = as.factor(Q38D))) +
+  geom_boxplot() +
+  labs(title = "Impact of Local Government Corruption on Poverty", x = "Corruption in Local Government", y = "Poverty Index") +
+  theme_minimal()
+```
+
+# **\[4\]**
+
+$$
+\begin{equation}\text{PovertyIndex}_{i} = \beta_0 + \beta_1 \cdot \text{DigitalAccess}_{i} + \beta_2 \cdot \text{CorruptionIndex}_{i} + \beta_3 \cdot \text{Education}_{i} + \beta_4 \cdot \text{UrbanRural}_{i} + \gamma_{\text{Country}} + \epsilon_{i}\end{equation}
+$$
+
+**a)** The table below presents the results of an OLS regression estimating the effects of **digital access** on **poverty** levels - confounding for my corruption index, education, and urban/rural location.
+
+For my design, I included three covariates to adjust for potential confounding. First, **perceived local corruption** is included because ineffective or corrupt institutions may prevent infrastructure or aid from benefiting low-income individuals, potentially confounding the relationship between digital access and poverty. Second, I control for **education**, since more educated individuals may be both more likely to own digital tools and better positioned to escape poverty. Finally, I include a categorical variable for **urban, rural, and peri-urban residence**, to account for structural differences in access to infrastructure and public services.
+
+Although this model estimates the relationship between digital access and poverty, interpreting the coefficient on digital access as causal comes with important caveats. One concern is **reverse causality**: individuals with lower poverty levels may be more able to afford digital tools, rather than digital access reducing poverty. However, you would be able to make a claim for reverse causality in the other direction as well.
+
+**b)** One empirical extension I am considering involves restricting the sample to **urban respondents only**. While the main regression model includes urban/rural residence as a covariate, this approach assumes that differences between location types can be adequately controlled for with a single variable. In reality, urban and rural areas in Sub-Saharan Africa often differ in ways that are difficult to fully capture—such as baseline infrastructure quality, access to markets, governance capacity, or proximity to aid and development efforts. These deeper structural factors could bias the estimated relationship between digital access and poverty.
+
+By limiting the analysis to individuals living in urban areas, I could reduce this type of geographic heterogeneity and test whether the observed relationship between digital infrastructure and poverty still holds in a more uniform environment. In this extension, I would re-estimate the model using the same covariates, excluding the urban/rural variable, since the sample would consist entirely of urban respondents. If the negative association between digital access and poverty remains statistically significant, it would suggest that the effect is not merely an artifact of broader urban–rural differences.
+
+While this strategy would not address other threats to causal inference—such as reverse causality or unmeasured household wealth—it could help rule out **urban–rural structural differences** as a major confounder, lending additional credibility to the main finding.
+
+**Regression Output**
+
+\*\* Had rendering issues with the regression image and could not trouble shoot. I typed out my findings below and the code implementation that I used.
+
+**Code Implementation**
+
+```{r}
+model_with_fe <- lm(poverty_index ~ digital_access_index + corruption_index + education + urban_rural + factor(COUNTRY), data = afro) summary(model_with_fe)
+```
+
+The regression results (see Table 2) show a strong negative relationship between digital infrastructure and poverty. The coefficient on the digital access index is **-0.57** (p \< 0.001), suggesting that respondents with full access to digital tools report significantly lower levels of material deprivation compared to those with no access.
+
+Corruption is positively associated with poverty (**β = 0.10**, p \< 0.001), and education is negatively associated (**β = -0.06**, p \< 0.001), both in expected directions.
+
+To control for unobserved national differences, I included country fixed effects in the model. This ensures the relationship is estimated based on within-country variation.
+
+**\[5\]**
+
+**References**
+
+Kanyam, Daniel A., et al. “The Mobile Phone Revolution: Have Mobile Phones and the Internet Reduced Corruption in Sub-Saharan Africa?” *World Development*, vol. 99, 2017, pp. 271–84, https://doi.org/10.1016/j.worlddev.2017.05.022.
+
+Li, Eric. “WINNING IN SUB-SAHARAN AFRICA’S AGRICULTURAL MARKET: AGRICULTURE, POVERTY, AND THE ROLE OF TECHNOLOGY.” *Harvard International Review*, vol. 41, no. 1, 2020, pp. 58–62. *JSTOR*, https://www.jstor.org/stable/26917286. Accessed 4 Apr. 2025.
